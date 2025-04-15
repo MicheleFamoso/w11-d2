@@ -1,5 +1,6 @@
-import { Article, ArticleResponse, Author, Launch, Event } from "./types"
+import { Article } from "./types"
 import { Col, Container, Row } from "react-bootstrap"
+
 interface SingleArticleProps {
   Article: Article
 }
@@ -7,18 +8,20 @@ interface SingleArticleProps {
 const SingleArticle = function (props: SingleArticleProps) {
   return (
     <Container>
-      <Row className="  bg-body-secondary mt-4 ">
-        <Col sm="3" md="2">
-          <img
-            src={props.Article.image_url}
-            alt="img-article"
-            className=" w-100 img-fluid p-2"
-          />
+      <Row className=" bg-primary-subtle  mt-3 mx-5 rounded-3">
+        <Col sm="3" md="2" className=" d-flex align-items-center">
+          <div className="">
+            <img
+              src={props.Article.image_url}
+              alt="img-article"
+              className=" img-fluid  py-3  "
+            />
+          </div>
         </Col>
         <Col md="10">
-          <Row>
+          <Row className="">
             <Col sm="12">
-              <h4 className="mt-3">{props.Article.title}</h4>
+              <h3 className="mt-3 text-truncate ">{props.Article.title}</h3>
             </Col>
             <Col sm="12">
               <p className=" fs-6">{props.Article.summary}</p>

@@ -1,7 +1,6 @@
-import { Col, Container, Row } from "react-bootstrap"
 import { useEffect, useState } from "react"
-import { Article, ArticleResponse, Author, Launch, Event } from "./types"
-import { data } from "react-router-dom"
+import { Article } from "./types"
+
 import SingleArticle from "./SingleArticle"
 
 const ListArticle = function () {
